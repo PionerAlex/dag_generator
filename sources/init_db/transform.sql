@@ -1,0 +1,17 @@
+CREATE TABLE IF NOT EXISTS orders (
+    id SERIAL PRIMARY KEY,
+    order_date DATE NOT NULL,
+    amount NUMERIC(10, 2) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS logs (
+    id SERIAL PRIMARY KEY,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    message TEXT
+);
+
+CREATE TABLE IF NOT EXISTS sessions (
+    id SERIAL PRIMARY KEY,
+    last_active TIMESTAMP NOT NULL DEFAULT NOW(),
+    user_id INT
+);

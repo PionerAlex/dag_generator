@@ -11,6 +11,10 @@ airflow-webserver.pid
 standalone_admin_password.txt
 unittests.cfg
 
+# Generated DAGs
+dags/*.py
+!dags/__init__.py
+
 # Python
 __pycache__/
 *.py[cod]

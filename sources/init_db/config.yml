@@ -1,0 +1,3 @@
+schedule: "@once"
+description: "Инициализация схемы БД: создание всех таблиц"
+owner: dba

@@ -1,0 +1,3 @@
+schedule: "0 3 * * *"
+description: "Ночной ML-пайплайн"
+owner: ds_team
