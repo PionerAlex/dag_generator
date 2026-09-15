@@ -1,0 +1,23 @@
+[2026-09-15T10:13:27.793+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-09-15T10:13:27.816+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: daily_report.sql_task_1 manual__2026-09-15T10:13:24.734090+00:00 [queued]>
+[2026-09-15T10:13:27.823+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: daily_report.sql_task_1 manual__2026-09-15T10:13:24.734090+00:00 [queued]>
+[2026-09-15T10:13:27.823+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-09-15T10:13:27.835+0000] {taskinstance.py:2330} INFO - Executing <Task(SQLExecuteQueryOperator): sql_task_1> on 2026-09-15 10:13:24.734090+00:00
+[2026-09-15T10:13:27.842+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=109) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-09-15T10:13:27.844+0000] {standard_task_runner.py:63} INFO - Started process 110 to run task
+[2026-09-15T10:13:27.844+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'daily_report', 'sql_task_1', 'manual__2026-09-15T10:13:24.734090+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/daily_report.py', '--cfg-path', '/tmp/tmp4x0fs2wn']
+[2026-09-15T10:13:27.845+0000] {standard_task_runner.py:91} INFO - Job 7: Subtask sql_task_1
+[2026-09-15T10:13:27.885+0000] {task_command.py:426} INFO - Running <TaskInstance: daily_report.sql_task_1 manual__2026-09-15T10:13:24.734090+00:00 [running]> on host 0940c83ac72f
+[2026-09-15T10:13:27.954+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='daily_report' AIRFLOW_CTX_TASK_ID='sql_task_1' AIRFLOW_CTX_EXECUTION_DATE='2026-09-15T10:13:24.734090+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-09-15T10:13:24.734090+00:00'
+[2026-09-15T10:13:27.956+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-09-15T10:13:27.965+0000] {sql.py:276} INFO - Executing: DROP TABLE IF EXISTS daily_sales
+[2026-09-15T10:13:27.974+0000] {base.py:84} INFO - Using connection ID 'transform' for task execution.
+[2026-09-15T10:13:27.988+0000] {base.py:84} INFO - Using connection ID 'transform' for task execution.
+[2026-09-15T10:13:27.993+0000] {sql.py:487} INFO - Running statement: DROP TABLE IF EXISTS daily_sales, parameters: None
+[2026-09-15T10:13:27.996+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-09-15T10:13:28.004+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=daily_report, task_id=sql_task_1, run_id=manual__2026-09-15T10:13:24.734090+00:00, execution_date=20260915T101324, start_date=20260915T101327, end_date=20260915T101328
+[2026-09-15T10:13:28.059+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-09-15T10:13:28.078+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-09-15T10:13:28.081+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
